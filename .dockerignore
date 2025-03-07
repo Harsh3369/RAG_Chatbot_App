@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+.git/
+.gitignore
+
+
+.env
+
+#folders 
+data/
+notebooks/
+uploaded_files/
+uploaded_documents/
+chroma_data/
+#cache and checkpoints
+.ipynb_checkpoints
+__pycache__/
+
