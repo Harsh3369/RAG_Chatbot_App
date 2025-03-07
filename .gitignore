@@ -6,6 +6,7 @@ notebooks/
 uploaded_files/
 uploaded_documents/
 chroma_data/
+rag_chatbot_env/
 #cache and checkpoints
 .ipynb_checkpoints
 __pycache__/
