@@ -1,6 +1,9 @@
 {
     "name": "Python DevContainer",
-    "image": "mcr.microsoft.com/devcontainers/python:3.10",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": "."
+    },
     "customizations": {
         "vscode": {
             "settings": {
@@ -18,20 +21,15 @@
     "postCreateCommand": "pip3 install -r requirements.txt --no-cache-dir --exists-action=i",
     "remoteUser": "vscode",
     "forwardPorts": [8000, 8501],
-    "mounts": [
-        {
-            "source": "/var/run/docker.sock",
-            "target": "/var/run/docker.sock",
-            "type": "bind"
-        },
-        {
-            "source": "${localWorkspaceFolder}/.env",
-            "target": "/app/.env",
-            "type": "bind"
-        }
-    ],
-    // Allow the devcontainer to run host docker commands, see https://github.com/devcontainers/templates/tree/main/src/docker-outside-of-docker
     "features": {
         "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
-    }
+    },
+    "runArgs": ["--env-file", "${localWorkspaceFolder}/.env"],
+    "mounts": [
+        {
+            "source": "${localWorkspaceFolder}/.env",
+            "target": "/workspace/.env",
+            "type": "bind"
+        }
+    ]
 }
