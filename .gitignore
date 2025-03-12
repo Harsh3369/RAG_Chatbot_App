@@ -2,7 +2,7 @@
 
 #folders 
 data/
-notebooks/
+#notebooks/
 uploaded_files/
 uploaded_documents/
 chroma_data/
