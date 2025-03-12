@@ -13,6 +13,14 @@ GPT4O_MINI_CONFIG = {
     'API_VERSION' : '2024-02-15-preview'
 }
 
+#Configuration setup for neoj4
+NEO4J_CONFIG = {
+    # "NEO4J_HOST": os.getenv("NEO4J_HOST"),
+    # "NEO4J_PORT": os.getenv("NEO4J_PORT"),
+    "NEO4J_USERNAME": os.getenv("NEO4J_USERNAME"),
+    "NEO4J_PASSWORD": os.getenv("NEO4J_PASSWORD")
+}
+
 #Configuration setup for ChromaDB
 CHROMA_DB_CONFIG = {
     "CHROMA_HOST": os.getenv("CHROMA_HOST"),
